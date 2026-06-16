@@ -1,3 +1,4 @@
+import homeBackground from './imgs/abd-studio-background.jpg';
 import SiteNav from './SiteNav'
 
 export default function Zine({currentPage }) {
@@ -7,9 +8,13 @@ export default function Zine({currentPage }) {
       color: 'white',
       fontFamily: "Times New Roman",
       padding: '2rem 1rem',
-      position: 'relative'
+      position: 'relative',
+      backgroundImage: `url(${homeBackground})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
     }}>
-
+    
     {/* Nav */}
     <SiteNav currentPage={currentPage} />
 
@@ -28,9 +33,7 @@ export default function Zine({currentPage }) {
     }}>
 
       {/* Body */}
-      <p>
-        TKTKTK.
-      </p>
+      <iframe src="https://drive.google.com/file/d/1aXfW1RLdSyAcYE2NYXc-bTb2762qf16N/preview" width="640" height="1000"></iframe>
 
     </div>
 
