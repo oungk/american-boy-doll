@@ -44,7 +44,7 @@ export default function Home() {
   
 
     {/* Main content - Centered Layout */}
-    <div style={{
+    <div className="home-main" style={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -58,7 +58,7 @@ export default function Home() {
       <h1>
         choose your destiny
       </h1>
-      <div style={{
+      <div className="abd-icons" style={{
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',        
@@ -99,35 +99,25 @@ export default function Home() {
 
     </div>
 
-    {/* Mobile Responsive Styles */}
     <style>{`
-      @media (min-width: 768px) {
-        .main-content {
-          flex-direction: row !important;
-          align-items: flex-start !important;
-          gap: 3rem !important;
-        }
-        .image-container {
-          flex-shrink: 0 !important;
-        }
-        .description {
-          text-align: left !important;
-          max-width: 400px !important;
-        }
-        .name {
-          top: -4rem !important;
-          left: -2rem !important;
-          transform: none !important;
-        }
-      }
       @media (max-width: 767px) {
-        nav {
-          position: relative !important;
-          flex-wrap: wrap;
-          top: auto !important;
-          left: auto !important;
-          justify-content: center !important;
-          margin-bottom: 2rem !important;
+        .home-main {
+          margin-top: 0 !important;
+          min-height: auto !important;
+        }
+        .home-main h1 {
+          font-size: 2.5rem !important;
+          text-align: center;
+        }
+        .abd-icons {
+          flex-direction: column !important;
+          gap: 2rem !important;
+          padding: 0 1rem !important;
+        }
+        .abd-icons img {
+          max-height: 35vh !important;
+          width: auto !important;
+          max-width: 100% !important;
         }
       }
     `}</style>
