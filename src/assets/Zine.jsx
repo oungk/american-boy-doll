@@ -1,4 +1,3 @@
-import homeBackground from './imgs/abd-studio-background.jpg';
 import SiteNav from './SiteNav'
 
 export default function Zine({currentPage }) {
@@ -9,10 +8,6 @@ export default function Zine({currentPage }) {
       fontFamily: "Times New Roman",
       padding: '2rem 1rem',
       position: 'relative',
-      backgroundImage: `url(${homeBackground})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
     }}>
     
     {/* Nav */}

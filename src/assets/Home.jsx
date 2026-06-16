@@ -9,10 +9,6 @@ export default function Home({ currentPage }) {
       fontFamily: "Times New Roman",
       padding: '2rem 1rem',
       position: 'relative',
-      backgroundImage: `url(${homeBackground})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
     }}>
     
     {/* Nav */}
