@@ -43,6 +43,7 @@ export default function Zine() {
       }}>
         <a
           href="mailto:skylarhooley@gmail.com"
+          target="_blank"
           style={{ color: 'inherit', textDecoration: 'none' }}
         >
           get yours now!

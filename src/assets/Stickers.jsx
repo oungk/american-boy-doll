@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
-import starSticker from './imgs/star-sticker.png'
 import americanBoyDoll from './imgs/american-boy-doll.png'
-import calicoCritter from './imgs/calico-critter.png'
+import loversLaneSticker from './imgs/lovers-lane-sticker.png'
+import honkSticker from './imgs/honk-sticker.png'
+import beautifulSticker from './imgs/beautiful-sticker.png'
 
-export default function Home() {
+export default function Stickers() {
   return (
     <div style={{
       minHeight: '100vh',
@@ -23,79 +24,80 @@ export default function Home() {
       gap: '1rem',
     }}>
       {/* Back to home icon — left */}
-      <a
-        href="https://oungk.github.io/sky-hooley-portfolio/"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ display: 'block', lineHeight: 0 }}
-      >
+      <Link to="/" style={{ display: 'block', lineHeight: 0 }}>
         <img
-          src={starSticker}
-          alt="Back to portfolio"
+          src={americanBoyDoll}
+          alt=""
           style={{
-            maxHeight: '10vh',
-            width: 'auto',
+            maxHeight: '20vh',
+            width: 'auto',          
             objectFit: 'contain',
             display: 'block',
           }}
         />
-      </a>
+      </Link>
+
+      {/* Email contact — right */}
+      <div style={{
+        textAlign: 'right',
+        fontFamily: "'Ballet', cursive",
+        fontSize: '70px',
+        color: '#ff3131',
+      }}>
+        <a
+          href="mailto:skylarhooley@gmail.com"
+          target="_blank"
+          style={{ color: 'inherit', textDecoration: 'none' }}
+        >
+          get yours now!
+        </a>
+      </div>
     </div>
   
 
-    {/* Main content - Centered Layout */}
+      {/* Main content - Centered Layout */}
     <div style={{
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
+      gap: '2rem',
       width: '100%',
       maxWidth: '800px',
       minHeight: '100vh',
       margin: '0 auto',
-      marginTop: '-5rem',
     }}>
-      <h1>
-        choose your destiny
-      </h1>
-      <div style={{
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',        
-      justifyContent: 'center',
-      width: '100%',
-      padding: '0 2rem',
-      gap: '1rem',
-    }}>
-      {/* Zine — left */}
-      <Link to="/my-zine" style={{ display: 'block', lineHeight: 0 }}>
-        <img
-          src={americanBoyDoll}
+      {/* Body */}
+      <img
+          src={loversLaneSticker}
           alt=""
           style={{
-            maxHeight: '70vh',
+            maxHeight: '40vh',
             width: 'auto',          
             objectFit: 'contain',
             display: 'block',
           }}
         />
-      </Link>
-
-      {/* Bumper stickers — right */}
-      <Link to="/bumper-stickers" style={{ display: 'block', lineHeight: 0 }}>
-        <img
-          src={calicoCritter}
+      <img
+          src={honkSticker}
           alt=""
           style={{
-            maxHeight: '50vh',
+            maxHeight: '40vh',
             width: 'auto',          
             objectFit: 'contain',
             display: 'block',
           }}
         />
-      </Link>
-
-    </div>
+      <img
+          src={beautifulSticker}
+          alt=""
+          style={{
+            maxHeight: '40vh',
+            width: 'auto',          
+            objectFit: 'contain',
+            display: 'block',
+          }}
+        />
 
     </div>
 
@@ -123,7 +125,6 @@ export default function Home() {
       @media (max-width: 767px) {
         nav {
           position: relative !important;
-          flex-wrap: wrap;
           top: auto !important;
           left: auto !important;
           justify-content: center !important;
