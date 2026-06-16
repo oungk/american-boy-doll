@@ -6,7 +6,6 @@ export default function Zine() {
     <div style={{
       minHeight: '100vh',
       color: 'white',
-      fontFamily: "Times New Roman",
       padding: '2rem 1rem',
       position: 'relative',
     }}>
