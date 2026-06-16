@@ -14,7 +14,7 @@ export default function Stickers() {
     }}>
     
     {/* Nav */}
-    <div style={{
+    <div className="bumper-header" style={{
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',        
@@ -38,10 +38,10 @@ export default function Stickers() {
       </Link>
 
       {/* Email contact — right */}
-      <div style={{
+      <div className="bumper-header-cta" style={{
         textAlign: 'right',
         fontFamily: "'Ballet', cursive",
-        fontSize: '70px',
+        fontSize: 'clamp(1.5rem, 8vw, 70px)',
         color: '#ff3131',
       }}>
         <a
@@ -64,36 +64,45 @@ export default function Stickers() {
       gap: '2rem',
       width: '100%',
       maxWidth: '800px',
-      minHeight: '100vh',
       margin: '0 auto',
+      padding: '1rem',
     }}>
       {/* Body */}
       <img
+          className="bumper-stickers"
           src={loversLaneSticker}
           alt=""
           style={{
-            maxHeight: '40vh',
-            width: 'auto',          
+            width: '100%',
+            maxWidth: '100%',
+            height: 'auto',
+            maxHeight: '28vh',
             objectFit: 'contain',
             display: 'block',
           }}
         />
       <img
+          className="bumper-stickers"
           src={honkSticker}
           alt=""
           style={{
-            maxHeight: '40vh',
-            width: 'auto',          
+            width: '100%',
+            maxWidth: '100%',
+            height: 'auto',
+            maxHeight: '28vh',
             objectFit: 'contain',
             display: 'block',
           }}
         />
       <img
+          className="bumper-stickers"
           src={beautifulSticker}
           alt=""
           style={{
-            maxHeight: '40vh',
-            width: 'auto',          
+            width: '100%',
+            maxWidth: '100%',
+            height: 'auto',
+            maxHeight: '28vh',
             objectFit: 'contain',
             display: 'block',
           }}
@@ -101,34 +110,18 @@ export default function Stickers() {
 
     </div>
 
-    {/* Mobile Responsive Styles */}
     <style>{`
-      @media (min-width: 768px) {
-        .main-content {
-          flex-direction: row !important;
-          align-items: flex-start !important;
-          gap: 3rem !important;
-        }
-        .image-container {
-          flex-shrink: 0 !important;
-        }
-        .description {
-          text-align: left !important;
-          max-width: 400px !important;
-        }
-        .name {
-          top: -4rem !important;
-          left: -2rem !important;
-          transform: none !important;
-        }
-      }
       @media (max-width: 767px) {
-        nav {
-          position: relative !important;
-          top: auto !important;
-          left: auto !important;
-          justify-content: center !important;
-          margin-bottom: 2rem !important;
+        .bumper-header {
+          flex-direction: column !important;
+          align-items: center !important;
+          padding: 0 1rem !important;
+        }
+        .bumper-header-cta {
+          text-align: center !important;
+        }
+        .bumper-stickers {
+          max-height: 22vh !important;
         }
       }
     `}</style>

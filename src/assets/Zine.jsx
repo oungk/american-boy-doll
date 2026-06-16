@@ -11,7 +11,7 @@ export default function Zine() {
     }}>
     
     {/* Nav */}
-    <div style={{
+    <div className="shop-header" style={{
       display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',        
@@ -35,10 +35,10 @@ export default function Zine() {
       </Link>
 
       {/* Email contact — right */}
-      <div style={{
+      <div className="zine-header-cta" style={{
         textAlign: 'right',
         fontFamily: "'Ballet', cursive",
-        fontSize: '70px',
+        fontSize: 'clamp(1.5rem, 8vw, 70px)',
         color: '#ff3131',
       }}>
         <a
@@ -61,43 +61,36 @@ export default function Zine() {
       gap: '2rem',
       width: '100%',
       maxWidth: '800px',
-      minHeight: '100vh',
       margin: '0 auto',
-      padding: '2rem 1rem'
+      padding: '1rem',
     }}>
       {/* Body */}
-      <iframe src="https://drive.google.com/file/d/1aXfW1RLdSyAcYE2NYXc-bTb2762qf16N/preview" width="640" height="1000"></iframe>
+      <iframe
+        className="zine-media"
+        src="https://drive.google.com/file/d/1aXfW1RLdSyAcYE2NYXc-bTb2762qf16N/preview"
+        title="Zine preview"
+        style={{
+          width: '100%',
+          maxWidth: '100%',
+          height: '75vh',
+          border: 0,
+        }}
+      />
 
     </div>
 
-    {/* Mobile Responsive Styles */}
     <style>{`
-      @media (min-width: 768px) {
-        .main-content {
-          flex-direction: row !important;
-          align-items: flex-start !important;
-          gap: 3rem !important;
-        }
-        .image-container {
-          flex-shrink: 0 !important;
-        }
-        .description {
-          text-align: left !important;
-          max-width: 400px !important;
-        }
-        .name {
-          top: -4rem !important;
-          left: -2rem !important;
-          transform: none !important;
-        }
-      }
       @media (max-width: 767px) {
-        nav {
-          position: relative !important;
-          top: auto !important;
-          left: auto !important;
-          justify-content: center !important;
-          margin-bottom: 2rem !important;
+        .zine-header {
+          flex-direction: column !important;
+          align-items: center !important;
+          padding: 0 1rem !important;
+        }
+        .zine-header-cta {
+          text-align: center !important;
+        }
+        .zine-media {
+          height: 70vh !important;
         }
       }
     `}</style>
